@@ -1,0 +1,93 @@
+﻿:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1d1f27, #0e1118 70%);
+  color: #f5f7ff;
+  min-height: 100vh;
+}
+
+.game {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 28px 18px 40px;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: 1.9rem;
+  text-align: center;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+#colorPicker {
+  width: 56px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.current-color {
+  padding: 8px 12px;
+  background: #202533;
+  border: 1px solid #303a53;
+  border-radius: 10px;
+}
+
+.hint {
+  text-align: center;
+  color: #c3cce5;
+  margin: 12px 0 18px;
+}
+
+.car-wrap {
+  background: linear-gradient(180deg, #1a2030, #141925);
+  border: 1px solid #2b344c;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+#car {
+  width: 100%;
+  display: block;
+}
+
+.part {
+  stroke: #f5f7ff;
+  stroke-width: 2;
+  cursor: pointer;
+  transition: transform 0.16s ease, filter 0.16s ease;
+}
+
+.part:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+.part.selected {
+  stroke: #ffd54f;
+  stroke-width: 3.5;
+}
+
+.status {
+  margin-top: 14px;
+  text-align: center;
+  color: #d7def3;
+}

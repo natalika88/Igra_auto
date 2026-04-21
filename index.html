@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Покрась болид</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game">
+    <h1>Покрась гоночный болид</h1>
+
+    <section class="toolbar">
+      <label for="colorPicker">Выбери цвет:</label>
+      <input id="colorPicker" type="color" value="#e53935" />
+      <div class="current-color">
+        Текущий цвет: <span id="colorValue">#E53935</span>
+      </div>
+    </section>
+
+    <section class="hint">
+      Наведи и кликни на деталь болида, чтобы покрасить её.
+    </section>
+
+    <section class="car-wrap">
+      <svg id="car" viewBox="0 0 900 360" aria-label="Гоночный болид" role="img">
+        <path d="M92 248 Q128 182 236 168 Q330 110 474 98 Q620 90 742 128 Q800 148 842 206 L838 248 Q812 266 764 268 L196 268 Q124 266 92 248 Z" fill="#2f3647" opacity="0.38" />
+
+        <path class="part" data-name="Передний бампер" d="M92 246 Q124 176 232 164 L224 198 Q158 206 124 252 Z" fill="#fb8c00" />
+        <path class="part" data-name="Капот" d="M224 166 Q308 112 434 102 Q462 100 486 100 L500 136 Q382 142 276 188 Q246 198 224 198 Z" fill="#f6c700" />
+        <path class="part" data-name="Крыша и задняя часть" d="M486 100 Q628 90 742 126 Q798 146 836 202 L752 204 Q694 176 624 166 Q552 154 500 136 Z" fill="#fdd835" />
+        <path class="part" data-name="Дверь" d="M318 186 Q388 150 500 144 Q576 148 648 174 L634 236 L292 238 Q296 206 318 186 Z" fill="#ffee58" />
+        <path class="part" data-name="Боковая юбка" d="M236 236 L756 236 Q744 266 708 270 L284 270 Q248 266 236 236 Z" fill="#8d96a6" />
+        <path class="part" data-name="Задний бампер" d="M752 204 L836 202 Q852 222 842 248 Q816 266 764 268 L708 270 Q742 258 752 204 Z" fill="#9fa8b8" />
+
+        <path d="M354 146 Q410 116 496 116 Q548 118 596 138 L560 176 Q496 166 438 170 Q386 172 340 188 Z" fill="#ffffff" />
+        <path d="M602 142 Q642 144 690 170 L666 196 Q628 178 584 176 Z" fill="#0e1017" />
+        <path d="M346 190 Q424 164 534 166" fill="none" stroke="#6d727f" stroke-width="4" stroke-linecap="round" />
+
+        <ellipse cx="304" cy="248" rx="76" ry="74" fill="#1b1d23" />
+        <ellipse cx="304" cy="248" rx="58" ry="56" fill="#6d7481" />
+        <ellipse cx="304" cy="248" rx="23" ry="22" fill="#c4c9d4" />
+
+        <ellipse cx="686" cy="248" rx="82" ry="79" fill="#1b1d23" />
+        <ellipse cx="686" cy="248" rx="62" ry="60" fill="#6d7481" />
+        <ellipse cx="686" cy="248" rx="24" ry="23" fill="#c4c9d4" />
+
+        <path d="M136 234 Q184 174 258 170" fill="none" stroke="#9ea5b5" stroke-width="3" stroke-linecap="round" opacity="0.75" />
+        <path d="M624 170 Q730 166 772 230" fill="none" stroke="#9ea5b5" stroke-width="3" stroke-linecap="round" opacity="0.75" />
+      </svg>
+    </section>
+
+    <section class="status">
+      <p id="statusText">Деталь не выбрана</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
