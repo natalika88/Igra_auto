@@ -16,6 +16,22 @@
       <div class="current-color">
         Текущий цвет: <span id="colorValue">#E53935</span>
       </div>
+      <button id="resetButton" type="button">Сброс</button>
+    </section>
+
+    <section class="palette" aria-label="Базовая палитра">
+      <button class="swatch" type="button" data-color="#E53935" style="--swatch:#E53935;" title="Красный"></button>
+      <button class="swatch" type="button" data-color="#FB8C00" style="--swatch:#FB8C00;" title="Оранжевый"></button>
+      <button class="swatch" type="button" data-color="#FDD835" style="--swatch:#FDD835;" title="Желтый"></button>
+      <button class="swatch" type="button" data-color="#43A047" style="--swatch:#43A047;" title="Зеленый"></button>
+      <button class="swatch" type="button" data-color="#00897B" style="--swatch:#00897B;" title="Бирюзовый"></button>
+      <button class="swatch" type="button" data-color="#1E88E5" style="--swatch:#1E88E5;" title="Синий"></button>
+      <button class="swatch" type="button" data-color="#3949AB" style="--swatch:#3949AB;" title="Индиго"></button>
+      <button class="swatch" type="button" data-color="#8E24AA" style="--swatch:#8E24AA;" title="Фиолетовый"></button>
+      <button class="swatch" type="button" data-color="#EC407A" style="--swatch:#EC407A;" title="Розовый"></button>
+      <button class="swatch" type="button" data-color="#6D4C41" style="--swatch:#6D4C41;" title="Коричневый"></button>
+      <button class="swatch" type="button" data-color="#757575" style="--swatch:#757575;" title="Серый"></button>
+      <button class="swatch" type="button" data-color="#212121" style="--swatch:#212121;" title="Черный"></button>
     </section>
 
     <section class="hint">
@@ -24,6 +40,19 @@
 
     <section class="car-wrap">
       <svg id="car" viewBox="0 0 900 360" aria-label="Гоночный болид" role="img">
+        <defs>
+          <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#232a39" />
+            <stop offset="100%" stop-color="#151a26" />
+          </linearGradient>
+          <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.88" />
+            <stop offset="100%" stop-color="#95a2ba" stop-opacity="0.7" />
+          </linearGradient>
+        </defs>
+
+        <rect x="66" y="258" width="772" height="36" rx="18" fill="url(#road)" opacity="0.85" />
+        <path d="M98 264 Q152 278 246 280 Q372 284 516 282 Q684 280 804 268" fill="none" stroke="#4f5563" stroke-width="2.5" opacity="0.5" />
         <path d="M92 248 Q128 182 236 168 Q330 110 474 98 Q620 90 742 128 Q800 148 842 206 L838 248 Q812 266 764 268 L196 268 Q124 266 92 248 Z" fill="#2f3647" opacity="0.38" />
 
         <path class="part" data-name="Передний бампер" d="M92 246 Q124 176 232 164 L224 198 Q158 206 124 252 Z" fill="#fb8c00" />
@@ -33,9 +62,20 @@
         <path class="part" data-name="Боковая юбка" d="M236 236 L756 236 Q744 266 708 270 L284 270 Q248 266 236 236 Z" fill="#8d96a6" />
         <path class="part" data-name="Задний бампер" d="M752 204 L836 202 Q852 222 842 248 Q816 266 764 268 L708 270 Q742 258 752 204 Z" fill="#9fa8b8" />
 
-        <path d="M354 146 Q410 116 496 116 Q548 118 596 138 L560 176 Q496 166 438 170 Q386 172 340 188 Z" fill="#ffffff" />
+        <path d="M354 146 Q410 116 496 116 Q548 118 596 138 L560 176 Q496 166 438 170 Q386 172 340 188 Z" fill="url(#glass)" />
         <path d="M602 142 Q642 144 690 170 L666 196 Q628 178 584 176 Z" fill="#0e1017" />
         <path d="M346 190 Q424 164 534 166" fill="none" stroke="#6d727f" stroke-width="4" stroke-linecap="round" />
+
+        <path d="M148 190 Q170 154 206 162 Q226 166 224 190 Q220 214 182 218 Q158 218 144 204 Z" fill="#9aa1ae" />
+        <path d="M158 192 Q176 168 202 170 Q212 172 210 188 Q206 204 180 208 Q166 208 158 200 Z" fill="#ccd2dc" />
+
+        <rect x="404" y="176" width="24" height="8" rx="4" fill="#333947" opacity="0.65" />
+        <rect x="436" y="173" width="27" height="8" rx="4" fill="#333947" opacity="0.65" />
+
+        <rect x="300" y="206" width="102" height="26" rx="6" fill="#f8f8f8" opacity="0.92" />
+        <text x="314" y="223" fill="#202227" font-size="14" font-family="Arial, sans-serif" font-weight="700">RACING</text>
+        <rect x="560" y="188" width="112" height="24" rx="6" fill="#f8f8f8" opacity="0.9" />
+        <text x="574" y="204" fill="#21242c" font-size="13" font-family="Arial, sans-serif" font-weight="700">SPEED LAB</text>
 
         <ellipse cx="304" cy="248" rx="76" ry="74" fill="#1b1d23" />
         <ellipse cx="304" cy="248" rx="58" ry="56" fill="#6d7481" />
@@ -47,6 +87,7 @@
 
         <path d="M136 234 Q184 174 258 170" fill="none" stroke="#9ea5b5" stroke-width="3" stroke-linecap="round" opacity="0.75" />
         <path d="M624 170 Q730 166 772 230" fill="none" stroke="#9ea5b5" stroke-width="3" stroke-linecap="round" opacity="0.75" />
+        <path d="M234 168 Q368 110 612 114" fill="none" stroke="#fff6b8" stroke-width="2.6" stroke-linecap="round" opacity="0.55" />
       </svg>
     </section>
 
